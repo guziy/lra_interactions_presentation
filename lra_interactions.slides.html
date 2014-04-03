@@ -1749,7 +1749,6 @@ text-align: inherit;
 </td>
 </tr>
 </table>
-
 </div></section>
     </section><section>
     <section>
@@ -1784,12 +1783,13 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="motivation">Motivation</h1>
+<h1 id="related-studies">Related studies</h1>
 <ul>
 <li><p>The importance of lakes for regioanl climate simulations was studied by:</p>
 <ul>
-<li><p>Samuelsson et al (2010) - <strong>Europe</strong></p></li>
-<li><p>Martynov et al (2012) - <strong>North America</strong></p></li>
+<li><p>Samuelsson et al (2010) - <strong>Europe</strong> (<span class="math">\(0.4^{\circ} \approx 40\: {\rm km}\)</span> )</p></li>
+<li><p>Martynov et al (2012) - <strong>North America</strong> (<span class="math">\(0.5^{\circ}\)</span>)</p></li>
+<li><p>Notaro et al (2013) - <strong>Great Lakes</strong> (<span class="math">\(10\: {\rm km}\)</span>)</p></li>
 </ul></li>
 <li><p>The importance of lakes in river models was emphasized in:</p>
 <ul>
@@ -1801,7 +1801,15 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="motivation">Motivation</h1>
+<h1 id="bowling-et-al-2009-some-results">Bowling et al (2009): some results</h1>
+<div style="align:center;width=100%;">
+<span class="math">\[
+NS=1-\frac
+{\sum_{t=1}^T\left(Q_o^t-Q_m^t\right)^2}
+{\sum_{t=1}^T\left(Q_o^t-\overline{Q_o}\right)^2}
+\]</span>
+</div>
+
 <table>
 <tr>
 <th>
@@ -1818,7 +1826,8 @@ Simulated without lakes and wetlands
 Putuligayuk
 </td> <td style="text-align:center;background-color:lightgreen;">
 <strong>0.8</strong>
-</td> <td style="text-align:center;">
+</td> 
+<td style="text-align:center;background-color:lightcoral;">
 0.51
 </td>
 </tr>
@@ -1828,7 +1837,8 @@ Putuligayuk
 Kuparuk
 </td> <td style="text-align:center;background-color:lightgreen;">
 <strong>0.5</strong>
-</td> <td style="text-align:center;">
+</td> 
+<td style="text-align:center;background-color:lightcoral;">
 0.02
 </td>
 </tr>
@@ -1848,7 +1858,6 @@ Kuparuk
 d_t S = R + U + GW - Q(S)
 \]</span>
 </div>
-
 </div></section>
     </section><section>
     <section>
@@ -1875,13 +1884,12 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 
 </tr>
 </table>
-
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="model-configuration-and-domain-of-interest">Model configuration and domain of interest</h1>
-<strong>Horizontal grid:</strong> <span class="math">\(260\times260\)</span>, <span class="math">\(dx = 0.1^{\circ}\)</span>; <strong>Time step:</strong> 5 min
+<strong>Horizontal grid:</strong> <span class="math">\(260\times260\)</span>, <span class="math">\(dx = 0.1^{\circ}\)</span>; <strong>Time step:</strong> 5 min; <nobr><strong>Period:</strong> 1980-2010</nobr>
 <table class="noborder">
 <tr>
 <td width="50%">
@@ -1897,22 +1905,82 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </td>
 </tr>
 </table>
-
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-fractions-as-seen-by-crcm5">Lake fractions as seen by CRCM5</h1>
+<p><img src="images/lake_fractions_220x220_0.1deg.jpeg"/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-atmosphere-interactions">Lake-atmosphere interactions</h1>
+<ul>
+<li><p>Comparing the following configurations:</p>
+<ul>
+<li><p>Simulation with lakes (<strong>CRCM5-HCD-R</strong>)</p></li>
+<li><p>Lakes replaced with land (<strong>CRCM5-R</strong>)</p></li>
+</ul></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-atmosphere-interactions-2m-air-temperature-rm-circc">Lake-atmosphere interactions: <nobr>2m air temperature <span class="math">\({\rm ^{\circ}C}\)</span></nobr></h1>
+<p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/TT_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
+<p><strong>No summer cooling visible in seasonal means</strong></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-atmosphere-interactions-2m-air-temperature-rm-circc-monthly-means">Lake-atmosphere interactions: <nobr>2m air temperature <span class="math">\({\rm ^{\circ}C}\)</span> monthly means</nobr></h1>
+<p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_May-June-July-August/TT_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-atmosphere-interactions-total-precipitation-rm-mmday">Lake-atmosphere interactions: <nobr>Total precipitation <span class="math">\({\rm mm/day}\)</span> </nobr></h1>
+<p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/PR_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-atmosphere-interactions-streamflow-rm-m3s">Lake-atmosphere interactions: <nobr>Streamflow <span class="math">\({\rm m^3/s}\)</span> </nobr></h1>
+<p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/STFA_CRCM5-HCD-R_CRCM5-R.jpeg"/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-river-routing">Lake-river routing</h1>
+<ul>
+<li><p>Comparing configurations:</p>
+<ul>
+<li><p><strong>CRCM5-HCD-R:</strong> only river routing</p></li>
+<li><p><strong>CRCM5-HCD-RL:</strong> river and lake routing</p></li>
+</ul></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="lake-river-routing-results-seasonal-streamflow-leftrm-m3sright">Lake-river routing results: <nobr>Seasonal streamflow <span class="math">\(\left({\rm m^3/s}\right)\)</span></nobr></h1>
+<p><img src="images/seasonal_mean_maps/CRCM5-HCD-RL_vs_CRCM5-HCD-R_for_Winter-Spring-Summer-Fall/STFA_CRCM5-HCD-RL_CRCM5-HCD-R.jpeg"/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="streamflow-validation-station-positions">Streamflow validation: Station positions</h1>
+<p><img src="images/station_positions_stfl_CEHQ.jpeg" height="700px"/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 
 </div></section>
     </section><section>
     <section>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight"><pre>
-</pre></div>
-
-</div>
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
 
 </div></section>
     </section>
