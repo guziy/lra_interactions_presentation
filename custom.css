@@ -1,6 +1,6 @@
 
-div.slides{
-	width: 1200px;
+.reveal div.slides{
+	width: 1200px; !important
 }
 
 

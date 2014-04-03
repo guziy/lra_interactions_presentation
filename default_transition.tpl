@@ -28,7 +28,7 @@ Reveal.initialize({
     //overview: true,
 
     // Vertical centering of slides
-    //center: true,
+    center: false,
 
     // Loop the presentation
     //loop: false,
