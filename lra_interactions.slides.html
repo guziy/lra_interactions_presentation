@@ -1755,26 +1755,22 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="outline">Outline</h1>
 <ul>
-<li><p><strong>Motivation</strong></p>
+<li><p><strong>Motivation and Previous studies</strong></p></li>
+<li><strong>Experiments and methodology</strong>
 <ul>
-<li><p>Study influence of lakes on regional climate</p></li>
-<li><p>Improve model realism and quality</p></li>
+<li>River and lake routing concepts</li>
+<li>Performed experiments</li>
 </ul></li>
-<li><p><strong>Experiments and methodology</strong></p>
-<ul>
-<li><p>River and lake routing concepts</p></li>
-<li><p>Performed experiments</p></li>
-</ul></li>
-<li><p><strong>Lake-atmosphere interactions</strong></p>
+<li><strong>Lake-atmosphere interactions</strong>
 <ul>
 <li>Temperature, precipitation and heat fluxes</li>
 </ul></li>
-<li><p><strong>Lake-river routing</strong></p>
+<li><strong>Lake-river routing</strong>
 <ul>
-<li><p>Simulated streamflows: impact of lake routing</p></li>
-<li><p>Simulated lake levels: influence of rivers</p></li>
+<li>Simulated streamflows: impact of lake routing</li>
+<li>Simulated lake levels: influence of rivers</li>
 </ul></li>
-<li><p><strong>Interflow</strong></p>
+<li><strong>Interflow</strong>
 <ul>
 <li>Impact on simulated streamflow and surface fields</li>
 </ul></li>
@@ -1802,7 +1798,7 @@ text-align: inherit;
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="bowling-et-al-2009-some-results">Bowling et al (2009): some results</h1>
-<div style="align:center;width=100%;">
+<div style="width:100%;text-align:center;">
 <span class="math">\[
 NS=1-\frac
 {\sum_{t=1}^T\left(Q_o^t-Q_m^t\right)^2}
@@ -1853,9 +1849,9 @@ Kuparuk
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="methodology-river-routing">Methodology: River routing</h1>
 <br/> <br/>
-<div style="font-size:250%;">
+<div style="font-size:200%;text-align:center">
 <span class="math">\[
-d_t S = R + U + GW - Q(S)
+d_t S = R + \color{red}U + \color{red}{GW} - \color{red}{Q(S)}
 \]</span>
 </div>
 </div></section>
@@ -1978,11 +1974,244 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-
+<h1 id="streamflow-validation-climatologic-hydrographs">Streamflow validation: climatologic hydrographs</h1>
+<p><img src="images/comp_point_with_obs_CRCM5-HCD-R_CRCM5-HCD-RL.jpeg"/></p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="streamflow-validation-q_10">Streamflow validation: <span class="math">\(Q_{10}\)</span></h1>
+<p><img src="images/percentiles_comparison_q10.jpeg"/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="streamflow-validation-q_90">Streamflow validation: <span class="math">\(Q_{90}\)</span></h1>
+<p><img src="images/percentiles_comparison_q90.jpeg"/></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="interflow-mechanism">Interflow: mechanism</h1>
+<div style="text-align:center;">
+<img src="images/interflow.jpeg"/>
+</div>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="interflow-formulation">Interflow: formulation</h1>
+<h2 id="the-prognostic-variable-is-saturation-st-theta_ltheta_s-which-can-be-expressed-as-a-function-of-time-counted-starting-from-complete-saturation-from-the-continuity-and-darcian-equations.">The prognostic variable is saturation <span class="math">\(S(t) =\theta_l/\theta_s\)</span>, which can be expressed as a function of time (counted starting from complete saturation) from the continuity and Darcian equations.</h2>
+<p><span class="math">\[
+S(t) = \begin{cases}
+1-\frac{1}{c}\frac{t}{t_c}, &amp; 0\leq t \leq t_c \\
+\left( 1-\frac{1}{c} \right) \left(\frac{t_c}{t} \right)^{1/(c-1)}, &amp; t &gt; t_c 
+\end{cases}
+\]</span></p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="conclusions">Conclusions</h1>
+<ul>
+<li><p>Lakes improve simulated streamflow.</p></li>
+<li><p>Simulating river flow improves lake level variability</p></li>
+<li><p>Interflow does not seem to be a major factor in the river flow process in the study region. Though it causes noticeable changes to soil moisture up to 30 mm and 2m temperature.</p></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="thank-you-for-attention">Thank you for attention!!!</h1>
+</div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[3]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="c">#copied from: http://slideviewer.herokuapp.com/github/ellisonbg/talk-scipy2013/blob/master/FeaturesAndScope.ipynb#/</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+
+<span class="s">&lt;style&gt;</span>
+
+<span class="s">.rendered_html {</span>
+<span class="s">    font-family: &quot;proxima-nova&quot;, helvetica;</span>
+<span class="s">    font-size: 150%;</span>
+<span class="s">    line-height: 1.3;</span>
+<span class="s">}</span>
+
+<span class="s">.rendered_html h1 {</span>
+<span class="s">    margin: 0.25em 0em 0.5em;</span>
+<span class="s">    color: #015C9C;</span>
+<span class="s">    text-align: center;</span>
+<span class="s">    line-height: 1.2; </span>
+<span class="s">    page-break-before: always;</span>
+<span class="s">}</span>
+
+<span class="s">.rendered_html h2 {</span>
+<span class="s">    margin: 1.1em 0em 0.5em;</span>
+<span class="s">    color: #26465D;</span>
+<span class="s">    line-height: 1.2;</span>
+<span class="s">}</span>
+
+<span class="s">.rendered_html h3 {</span>
+<span class="s">    margin: 1.1em 0em 0.5em;</span>
+<span class="s">    color: #002845;</span>
+<span class="s">    line-height: 1.2;</span>
+<span class="s">}</span>
+
+<span class="s">.rendered_html li {</span>
+<span class="s">    line-height: 1.5; </span>
+<span class="s">}</span>
+
+<span class="s">.prompt {</span>
+<span class="s">    font-size: 120%; </span>
+<span class="s">}</span>
+
+<span class="s">.CodeMirror-lines {</span>
+<span class="s">    font-size: 120%; </span>
+<span class="s">}</span>
+
+<span class="s">.output_area {</span>
+<span class="s">    font-size: 120%; </span>
+<span class="s">}</span>
+
+<span class="s">h1.bigtitle {</span>
+<span class="s">    margin: 4cm 1cm 4cm 1cm;</span>
+<span class="s">    font-size: 300%;</span>
+<span class="s">}</span>
+
+<span class="s">h3.point {</span>
+<span class="s">    font-size: 200%;</span>
+<span class="s">    text-align: center;</span>
+<span class="s">    margin: 2em 0em 2em 0em;</span>
+<span class="s">    #26465D</span>
+<span class="s">}</span>
+
+<span class="s">.logo {</span>
+<span class="s">    margin: 20px 0 20px 0;</span>
+<span class="s">}</span>
+
+<span class="s">a.anchor-link {</span>
+<span class="s">    display: none;</span>
+<span class="s">}</span>
+
+<span class="s">h1.title { </span>
+<span class="s">    font-size: 250%;</span>
+<span class="s">}</span>
+
+<span class="s">&lt;/style&gt;</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_display_data">
+
+<div class="output_html rendered_html">
+
+
+<style>
+
+.rendered_html {
+    font-family: "proxima-nova", helvetica;
+    font-size: 150%;
+    line-height: 1.3;
+}
+
+.rendered_html h1 {
+    margin: 0.25em 0em 0.5em;
+    color: #015C9C;
+    text-align: center;
+    line-height: 1.2; 
+    page-break-before: always;
+}
+
+.rendered_html h2 {
+    margin: 1.1em 0em 0.5em;
+    color: #26465D;
+    line-height: 1.2;
+}
+
+.rendered_html h3 {
+    margin: 1.1em 0em 0.5em;
+    color: #002845;
+    line-height: 1.2;
+}
+
+.rendered_html li {
+    line-height: 1.5; 
+}
+
+.prompt {
+    font-size: 120%; 
+}
+
+.CodeMirror-lines {
+    font-size: 120%; 
+}
+
+.output_area {
+    font-size: 120%; 
+}
+
+h1.bigtitle {
+    margin: 4cm 1cm 4cm 1cm;
+    font-size: 300%;
+}
+
+h3.point {
+    font-size: 200%;
+    text-align: center;
+    margin: 2em 0em 2em 0em;
+    #26465D
+}
+
+.logo {
+    margin: 20px 0 20px 0;
+}
+
+a.anchor-link {
+    display: none;
+}
+
+h1.title { 
+    font-size: 250%;
+}
+
+</style>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre>
+</pre></div>
+
+</div>
+</div>
 
 </div></section>
     </section>
