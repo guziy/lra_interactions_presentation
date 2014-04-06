@@ -1,8 +1,8 @@
 
-.reveal div.slides{
-	width: 1200px; !important
-}
+.reveal img{
 
+	max-height: 700px;
+}
 
 table.logo{
    height: 100px;
@@ -91,5 +91,5 @@ div.slides{
 
 div.text_cell_render.border-box-sizing.rendered_html span#authors{
 	color: gray;
-	font-size: 70%;
+	font-size: 150%;
 }

@@ -9,6 +9,11 @@
 
 Reveal.initialize({
 
+     //To increase slide size
+     width:'100%',
+     height:'100%',
+
+
     // Display controls in the bottom right corner
     //controls: true,
 
