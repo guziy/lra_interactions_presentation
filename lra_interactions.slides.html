@@ -11,6 +11,9 @@
 
 <title>lra_interactions slides</title>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
 <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
@@ -1740,7 +1743,7 @@ div.output_prompt {
 </ul></li>
 <li><strong>Lake-atmosphere interactions</strong>
 <ul>
-<li>Temperature, precipitation and heat fluxes</li>
+<li>Temperature, precipitation</li>
 </ul></li>
 <li><strong>Lake-river routing</strong>
 <ul>
@@ -2016,7 +2019,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="streamflow-validation-climatologic-hydrographs">Streamflow validation: climatologic hydrographs</h1>
-<p><img src="images/comp_point_with_obs_CRCM5-HCD-R_CRCM5-HCD-RL.jpeg"/></p>
+<p><img src="images/comp_point_with_obs_CRCM5-HCD-R_CRCM5-HCD-RL.jpeg" style="max-height:500px;"/></p>
 </div>
 </div>
 </div></section>
@@ -2159,6 +2162,21 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="interflow-soil-parameters">Interflow: Soil parameters</h1>
+<div style="text-align:center;">
+<img src="images/static_fields.jpeg" style="max-height:700px;"/>
+</div>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="interflow-change-in-streamflow-leftrm-m3sright">Interflow: change in streamflow <span class="math">\(\left({\rm m^3/s}\right)\)</span></h1>
 <p><img src="images/seasonal_mean_maps/ITFS_vs_CRCM5-HCD-RL_for_Winter-Spring-Summer-Fall/STFL_ITFS_CRCM5-HCD-RL.jpeg"/></p>
 </div>
@@ -2198,11 +2216,25 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="interflow-absorbed-shortwave-radiation-at-the-surface-leftrm-wm2right">Interflow: absorbed shortwave radiation at the surface <span class="math">\(\left({\rm W/m^2}\right)\)</span></h1>
+<p><img src="images/seasonal_mean_maps/ITFS_vs_CRCM5-HCD-RL_for_Winter-Spring-Summer-Fall/AS_ITFS_CRCM5-HCD-RL.jpeg"/></p>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="conclusions">Conclusions</h1>
 <ul>
 <li><p>Lakes improve simulated streamflow</p></li>
 <li><p>Simulating river flow improves (increases) lake level variability</p></li>
 <li><p>Interflow does not seem to be a major factor in the river flow process in the study region. Though it causes noticeable changes to soil moisture up to 30 mm and 2m temperature.</p></li>
+<li><p>For the simulated streamflow the effect of the interflow is comparable with the effect of lake-atmosphere interactions.</p></li>
 </ul>
 </div>
 </div>
@@ -2225,7 +2257,7 @@ S(t) = \begin{cases}
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[3]:
+In&nbsp;[1]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2291,6 +2323,7 @@ In&nbsp;[3]:
 
 <span class="s">.logo {</span>
 <span class="s">    margin: 20px 0 20px 0;</span>
+<span class="s">    height: 60px;</span>
 <span class="s">}</span>
 
 <span class="s">a.anchor-link {</span>
@@ -2377,6 +2410,7 @@ h3.point {
 
 .logo {
     margin: 20px 0 20px 0;
+    height: 60px;
 }
 
 a.anchor-link {
