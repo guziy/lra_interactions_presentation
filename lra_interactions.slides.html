@@ -1719,8 +1719,10 @@ div.output_prompt {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="lake-river-atmosphere-interactions-as-simulated-by-the-crcm5-over-north-east-canada">Lake-river-atmosphere interactions as simulated by the CRCM5 over north-east Canada</h1>
 <div style="text-align:center;margin-top:10%;">
-<p><span id="authors">Oleksandr (Sasha) Huziy, Laxmi Sushama, René Laprise</span> <br/></p>
-<img src="images/Escer2.jpg" class="logo"/> <img src="images/logo_uqam_0.png" class="logo"/>
+<span id="authors">Oleksandr (Sasha) Huziy, Laxmi Sushama, René Laprise</span>
+<br/>
+
+<img src="images/Escer2.jpg" class="logo"/> <img src="images/logo_uqam_0.png" class="logo"/> 
 </div>
 </div>
 </div>
@@ -1735,25 +1737,30 @@ div.output_prompt {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="outline">Outline</h1>
 <ul>
-<li><p><strong>Motivation and Previous studies</strong></p></li>
-<li><strong>Experiments and methodology</strong>
+<li><p><strong>Motivation and Previous studies</strong></p>
+</li>
+<li><p><strong>Experiments and methodology</strong></p>
 <ul>
 <li>River and lake routing concepts</li>
 <li>Performed experiments</li>
-</ul></li>
-<li><strong>Lake-atmosphere interactions</strong>
+</ul>
+</li>
+<li><p><strong>Lake-atmosphere interactions</strong></p>
 <ul>
 <li>Temperature, precipitation</li>
-</ul></li>
-<li><strong>Lake-river routing</strong>
+</ul>
+</li>
+<li><p><strong>Lake-river routing</strong></p>
 <ul>
-<li>Simulated streamflows: impact of lake routing</li>
+<li>Simulated streamflows: impact of lake routing </li>
 <li>Simulated lake levels: influence of rivers</li>
-</ul></li>
-<li><strong>Interflow</strong>
+</ul>
+</li>
+<li><p><strong>Interflow</strong></p>
 <ul>
 <li>Impact on simulated streamflow and surface fields</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1770,15 +1777,22 @@ div.output_prompt {
 <ul>
 <li><p>The importance of lakes for regioanl climate simulations was studied by:</p>
 <ul>
-<li><p>Samuelsson et al (2010) - <strong>Europe</strong> (<span class="math">\(0.4^{\circ} \approx 40\: {\rm km}\)</span> )</p></li>
-<li><p>Martynov et al (2012) - <strong>North America</strong> (<span class="math">\(0.5^{\circ}\)</span>)</p></li>
-<li><p>Notaro et al (2013) - <strong>Great Lakes</strong> (<span class="math">\(10\: {\rm km}\)</span>)</p></li>
-</ul></li>
+<li><p>Samuelsson et al (2010) - <strong>Europe</strong> ($0.4^{\circ} \approx 40\: {\rm km}$ )</p>
+</li>
+<li><p>Martynov et al (2012) - <strong>North America</strong> ($0.5^{\circ}$)</p>
+</li>
+<li><p>Notaro et al (2013) - <strong>Great Lakes</strong> ($10\: {\rm km}$)</p>
+</li>
+</ul>
+</li>
 <li><p>The importance of lakes in river models was emphasized in:</p>
 <ul>
-<li><p>Bowling and Letteamaier (2009) - <strong>VIC model</strong></p></li>
-<li><p>Döll et al (2003) - <strong>WGHM model</strong></p></li>
-</ul></li>
+<li><p>Bowling and Letteamaier (2009) - <strong>VIC model</strong></p>
+</li>
+<li><p>Döll et al (2003) - <strong>WGHM model</strong></p>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1791,12 +1805,13 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="methodology-river-routing">Methodology: River routing</h1>
-<br/> <br/>
+<h1 id="methodology-river-routing-">Methodology: River routing </h1>
+<p><br/>
+<br/></p>
 <div style="font-size:200%;text-align:center">
-<span class="math">\[
+$$
 d_t S = R + \color{red}U + \color{red}{GW} - \color{red}{Q(S)}
-\]</span>
+$$
 </div>
 </div>
 </div>
@@ -1813,17 +1828,19 @@ d_t S = R + \color{red}U + \color{red}{GW} - \color{red}{Q(S)}
 <table class="noborder" width="1000px">
 <tr>
 <td>
-<img src="images/global_and_local_lakes_diagram.jpg" width="600px"/>
+<img src="images/global_and_local_lakes_diagram.jpg" width="600px"/> 
 </td>
 
 <td valign="top" width="60%">
 <ul>
 <li>
-Rivers can flow into global lakes whereas local lakes get inflow only from runoff and ground water outflow generated in the same grid-cell. <br/>
+Rivers can flow into global lakes whereas local lakes get inflow only from runoff and ground water outflow generated in the same grid-cell.
+<br/>
 </li>
 
 <li>
-Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
+Each global lake is modelled as a whole by the river-lake routing scheme. 
+<br/>
 </li>
 
 </ul>
@@ -1843,19 +1860,21 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="model-configuration-and-domain-of-interest">Model configuration and domain of interest</h1>
-<strong>Horizontal grid:</strong> <span class="math">\(260\times260\)</span>, <span class="math">\(dx = 0.1^{\circ}\)</span>; <strong>Time step:</strong> 5 min; <nobr><strong>Period:</strong> 1980-2010</nobr>
+<p><strong>Horizontal grid:</strong> $260\times260$, $dx = 0.1^{\circ}$; <strong>Time step:</strong> 5 min; <nobr><strong>Period:</strong> 1980-2010</nobr></p>
 <table class="noborder">
 <tr>
 <td width="50%">
-    
-<img src="images/domain.jpg">
+    <img src="images/domain.jpg">
 </td>
 
 <td valign="top">
-<p><strong>Surface scheme:</strong> CLASS3.5;</p>
-<p><strong>Lake model:</strong> Hostetler;</p>
-<p><strong>River model:</strong> WATROUTE-modified;</p>
-<strong>Atmospheric driving data:</strong> ERA-Interim, <span class="math">\(1.5^{\circ}\)</span>
+<strong>Surface scheme:</strong> CLASS3.5; 
+
+<strong>Lake model:</strong> Hostetler; 
+
+<strong>River model:</strong> WATROUTE-modified; 
+
+<strong>Atmospheric driving data:</strong> ERA-Interim, $1.5^{\circ}$
 </td>
 </tr>
 </table>
@@ -1887,9 +1906,12 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <ul>
 <li><p>Comparing the following configurations:</p>
 <ul>
-<li><p>Simulation with lakes (<strong>CRCM5-HCD-R</strong>)</p></li>
-<li><p>Lakes replaced with land (<strong>CRCM5-R</strong>)</p></li>
-</ul></li>
+<li><p>Simulation with lakes (<strong>CRCM5-HCD-R</strong>) </p>
+</li>
+<li><p>Lakes replaced with land (<strong>CRCM5-R</strong>)</p>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1902,7 +1924,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lake-atmosphere-interactions-2m-air-temperature-rm-circc">Lake-atmosphere interactions: <nobr>2m air temperature <span class="math">\({\rm ^{\circ}C}\)</span></nobr></h1>
+<h1 id="lake-atmosphere-interactions-nobr-2m-air-temperature-0-nobr-">Lake-atmosphere interactions: <nobr>2m air temperature ${\rm ^{\circ}C}$</nobr></h1>
 <p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/TT_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
 <p><strong>No summer cooling visible in seasonal means</strong></p>
 </div>
@@ -1916,7 +1938,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lake-atmosphere-interactions-2m-air-temperature-rm-circc-monthly-means">Lake-atmosphere interactions: <nobr>2m air temperature <span class="math">\({\rm ^{\circ}C}\)</span> monthly means</nobr></h1>
+<h1 id="lake-atmosphere-interactions-nobr-2m-air-temperature-0-monthly-means-nobr-">Lake-atmosphere interactions: <nobr>2m air temperature ${\rm ^{\circ}C}$ monthly means</nobr></h1>
 <p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_May-June-July-August/TT_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
 </div>
 </div>
@@ -1929,7 +1951,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lake-atmosphere-interactions-total-precipitation-rm-mmday">Lake-atmosphere interactions: <nobr>Total precipitation <span class="math">\({\rm mm/day}\)</span> </nobr></h1>
+<h1 id="lake-atmosphere-interactions-nobr-total-precipitation-0-nobr-">Lake-atmosphere interactions: <nobr>Total precipitation ${\rm mm/day}$ </nobr></h1>
 <p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/PR_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
 </div>
 </div>
@@ -1942,7 +1964,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lake-atmosphere-interactions-streamflow-rm-m3s">Lake-atmosphere interactions: <nobr>Streamflow <span class="math">\({\rm m^3/s}\)</span> </nobr></h1>
+<h1 id="lake-atmosphere-interactions-nobr-streamflow-0-nobr-">Lake-atmosphere interactions: <nobr>Streamflow ${\rm m^3/s}$ </nobr></h1>
 <p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/STFA_CRCM5-HCD-R_CRCM5-R.jpeg"/></p>
 </div>
 </div>
@@ -1958,7 +1980,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <h1 id="conclusion-lake-atmosphere-interactions">Conclusion: lake-atmosphere interactions</h1>
 <ul>
 <li>Lake-atmosphere interactions warm climate and increase precipitation for the considered experiment</li>
-<li>The impact on streamflow is mostly positive, but not very big (<span class="math">\(\leq 75\; {\rm m^3/s}\)</span>)</li>
+<li>The impact on streamflow is mostly positive, but not very big ($\leq 75\; {\rm m^3/s}$)</li>
 </ul>
 </div>
 </div>
@@ -1975,9 +1997,12 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <ul>
 <li><p>Comparing configurations:</p>
 <ul>
-<li><p><strong>CRCM5-HCD-R:</strong> only river routing</p></li>
-<li><p><strong>CRCM5-HCD-RL:</strong> river and lake routing</p></li>
-</ul></li>
+<li><p><strong>CRCM5-HCD-R:</strong> only river routing</p>
+</li>
+<li><p><strong>CRCM5-HCD-RL:</strong> river and lake routing</p>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1990,7 +2015,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lake-river-routing-results-seasonal-streamflow-leftrm-m3sright">Lake-river routing results: <nobr>Seasonal streamflow <span class="math">\(\left({\rm m^3/s}\right)\)</span></nobr></h1>
+<h1 id="lake-river-routing-results-nobr-seasonal-streamflow-0-nobr-">Lake-river routing results: <nobr>Seasonal streamflow $\left({\rm m^3/s}\right)$</nobr></h1>
 <p><img src="images/seasonal_mean_maps/CRCM5-HCD-RL_vs_CRCM5-HCD-R_for_Winter-Spring-Summer-Fall/STFA_CRCM5-HCD-RL_CRCM5-HCD-R.jpeg"/></p>
 </div>
 </div>
@@ -2031,7 +2056,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="streamflow-validation-q_10">Streamflow validation: <span class="math">\(Q_{10}\)</span></h1>
+<h1 id="streamflow-validation-0-">Streamflow validation: $Q_{10}$</h1>
 <p><img src="images/percentiles_comparison_q10.jpeg"/></p>
 </div>
 </div>
@@ -2044,7 +2069,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="streamflow-validation-q_90">Streamflow validation: <span class="math">\(Q_{90}\)</span></h1>
+<h1 id="streamflow-validation-0-">Streamflow validation: $Q_{90}$</h1>
 <p><img src="images/percentiles_comparison_q90.jpeg"/></p>
 </div>
 </div>
@@ -2059,8 +2084,10 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="conclusion-lake-river-routing">Conclusion: Lake-river routing</h1>
 <ul>
-<li><p>Lake-river routing is very significant for seasonal mean streamflow values. Its effect can be up to <span class="math">\(300-400\;{\rm m^3/s}\)</span></p></li>
-<li><p>Lake-river routing improves simulated high and low flow values</p></li>
+<li><p>Lake-river routing is very significant for seasonal mean streamflow values. Its effect can be up to $300-400\;{\rm m^3/s}$</p>
+</li>
+<li><p>Lake-river routing improves simulated high and low flow values</p>
+</li>
 </ul>
 </div>
 </div>
@@ -2074,7 +2101,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="lake-level">Lake level</h1>
-<h2 id="compare-lake-level-variation-due-to-only-leftp-eright-term-with-the-variation-of-the-levels-modelled-via-river-lake-routing.">Compare lake level variation due to only <span class="math">\(\left(P-E\right)\)</span> term with the variation of the levels modelled via river lake routing.</h2>
+<h2 id="compare-lake-level-variation-due-to-only-0-term-with-the-variation-of-the-levels-modelled-via-river-lake-routing-">Compare lake level variation due to only $\left(P-E\right)$ term with the variation of the levels modelled via river lake routing.</h2>
 </div>
 </div>
 </div></section>
@@ -2112,7 +2139,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="conclusion-lake-levels">Conclusion: lake levels</h1>
 <ul>
-<li><span class="math">\((P-E)\)</span> only is not sufficient to fully explain lake level variability: spring peak amplitude is underestimated and secondary maximum tha occurs in Fallis not present.</li>
+<li>$(P-E)$ only is not sufficient to fully explain lake level variability: spring peak amplitude is underestimated and secondary maximum tha occurs in Fallis not present. </li>
 </ul>
 </div>
 </div>
@@ -2141,16 +2168,16 @@ Each global lake is modelled as a whole by the river-lake routing scheme. <br/>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="interflow-formulation">Interflow: formulation</h1>
-<div style="font-size:150%;">
-<span class="math">\[
+<p><div style="font-size:150%;">
+$$
 S(t) = \begin{cases}
 1-\frac{1}{c}\frac{t}{t_c}, &amp; 0\leq t \leq t_c \\
 \left( 1-\frac{1}{c} \right) \left(\frac{t_c}{t} \right)^{1/(c-1)}, &amp; t &gt; t_c 
 \end{cases}
-\]</span>
+$$
 </div>
-<p><br/></p>
-<p>The prognostic variable is saturation <span class="math">\(S(t) =\theta_l/\theta_s\)</span>, which can be expressed as a function of time (counted starting from complete saturation) from the continuity and Darcian equations.</p>
+<br/></p>
+<p>The prognostic variable is saturation $S(t) =\theta_l/\theta_s$, which can be expressed as a function of time (counted starting from complete saturation) from the continuity and Darcian equations. </p>
 </div>
 </div>
 </div></section>
@@ -2177,7 +2204,7 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="interflow-change-in-streamflow-leftrm-m3sright">Interflow: change in streamflow <span class="math">\(\left({\rm m^3/s}\right)\)</span></h1>
+<h1 id="interflow-change-in-streamflow-0-">Interflow: change in streamflow $\left({\rm m^3/s}\right)$</h1>
 <p><img src="images/seasonal_mean_maps/ITFS_vs_CRCM5-HCD-RL_for_Winter-Spring-Summer-Fall/STFL_ITFS_CRCM5-HCD-RL.jpeg"/></p>
 </div>
 </div>
@@ -2190,7 +2217,7 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="interflow-surface-runoff-leftrm-mmdayright">Interflow: surface runoff <span class="math">\(\left({\rm mm/day}\right)\)</span></h1>
+<h1 id="interflow-surface-runoff-0-">Interflow: surface runoff $\left({\rm mm/day}\right)$</h1>
 <p><img src="images/seasonal_mean_maps/ITFS_vs_CRCM5-HCD-RL_for_Winter-Spring-Summer-Fall/TRAF_ITFS_CRCM5-HCD-RL.jpeg"/></p>
 </div>
 </div>
@@ -2203,7 +2230,7 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="interflow-2m-air-temperature-leftrm-circcright">Interflow: 2m air temperature <span class="math">\(\left({\rm ^{\circ}C}\right)\)</span></h1>
+<h1 id="interflow-2m-air-temperature-0-">Interflow: 2m air temperature $\left({\rm ^{\circ}C}\right)$</h1>
 <p><img src="images/seasonal_mean_maps/ITFS_vs_CRCM5-HCD-RL_for_Winter-Spring-Summer-Fall/TT_ITFS_CRCM5-HCD-RL.jpeg"/></p>
 </div>
 </div>
@@ -2216,7 +2243,7 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="interflow-absorbed-shortwave-radiation-at-the-surface-leftrm-wm2right">Interflow: absorbed shortwave radiation at the surface <span class="math">\(\left({\rm W/m^2}\right)\)</span></h1>
+<h1 id="interflow-absorbed-shortwave-radiation-at-the-surface-0-">Interflow: absorbed shortwave radiation at the surface $\left({\rm W/m^2}\right)$</h1>
 <p><img src="images/seasonal_mean_maps/ITFS_vs_CRCM5-HCD-RL_for_Winter-Spring-Summer-Fall/AS_ITFS_CRCM5-HCD-RL.jpeg"/></p>
 </div>
 </div>
@@ -2231,10 +2258,14 @@ S(t) = \begin{cases}
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="conclusions">Conclusions</h1>
 <ul>
-<li><p>Lakes improve simulated streamflow</p></li>
-<li><p>Simulating river flow improves (increases) lake level variability</p></li>
-<li><p>Interflow does not seem to be a major factor in the river flow process in the study region. Though it causes noticeable changes to soil moisture up to 30 mm and 2m temperature.</p></li>
-<li><p>For the simulated streamflow the effect of the interflow is comparable with the effect of lake-atmosphere interactions.</p></li>
+<li><p>Lakes improve simulated streamflow</p>
+</li>
+<li><p>Simulating river flow improves (increases) lake level variability</p>
+</li>
+<li><p>Interflow does not seem to be a major factor in the river flow process in the study region. Though it causes noticeable changes to soil moisture up to 30 mm and 2m temperature.</p>
+</li>
+<li><p>For the simulated streamflow the effect of the interflow is comparable with the effect of lake-atmosphere interactions.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -2247,7 +2278,7 @@ S(t) = \begin{cases}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="thank-you-for-attention">Thank you for attention!!!</h1>
+<h1 id="thank-you-for-attention-">Thank you for attention!!!</h1>
 </div>
 </div>
 </div></section>
