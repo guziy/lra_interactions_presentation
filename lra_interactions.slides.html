@@ -11,9 +11,6 @@
 
 <title>lra_interactions slides</title>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
 <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
@@ -1709,7 +1706,25 @@ div.output_prompt {
 <body>
 <div class="reveal">
 <div class="slides">
-<section>
+<div style=display:none>
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight"><pre><span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div></section>
+    </section><section>
     <section>
     
 <div class="cell border-box-sizing text_cell rendered">
@@ -1717,11 +1732,15 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="lake-river-atmosphere-interactions-as-simulated-by-the-crcm5-over-north-east-canada">Lake-river-atmosphere interactions as simulated by the CRCM5 over north-east Canada</h1>
-<div style="text-align:center;margin-top:10%;">
-<span id="authors">Oleksandr (Sasha) Huziy, Laxmi Sushama, René Laprise</span>
-<br/>
+<h1 class="bigtitle">
+Lake-river-atmosphere interactions as simulated by the CRCM5 over north-east Canada
+</h1>
 
+
+<div style="text-align:center;margin-top:10%;">
+<span id="authors"><nobr>Oleksandr (Sasha) Huziy, Laxmi Sushama, René Laprise</nobr></span>
+<br/>
+<br/>
 <img src="images/Escer2.jpg" class="logo"/> <img src="images/logo_uqam_0.png" class="logo"/> 
 </div>
 </div>
@@ -1761,6 +1780,11 @@ div.output_prompt {
 <li>Impact on simulated streamflow and surface fields</li>
 </ul>
 </li>
+<li><p><strong>NEMO: offline simulations</strong></p>
+<ul>
+<li>Skill of the model to represent flows and temperature of The Great Lakes </li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -1775,7 +1799,7 @@ div.output_prompt {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="related-studies">Related studies</h1>
 <ul>
-<li><p>The importance of lakes for regioanl climate simulations was studied by:</p>
+<li><p>The importance of lakes for regional climate simulations was studied by:</p>
 <ul>
 <li><p>Samuelsson et al (2010) - <strong>Europe</strong> ($0.4^{\circ} \approx 40\: {\rm km}$ )</p>
 </li>
@@ -1805,13 +1829,39 @@ div.output_prompt {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="goals-of-the-study">Goals of the study</h1>
+<ul>
+<li><p>Study lake-atmosphere interactions at a higher resolution over Québec region</p>
+</li>
+<li><p>Identify influence of lake-atmosphere interactions on simulated streamflow</p>
+</li>
+<li><p>Study lake-river interactions: simulated hydrographs and lake level variations</p>
+</li>
+<li><p>Quantify influence of the interflow process on regional climate and simulated streamflow</p>
+</li>
+<li><p>Determine the ability of the NEMO ocean model to simulate Great Lakes</p>
+</li>
+</ul>
+</div>
+</div>
+</div></section>
+    </section><section>
+    <section>
+    
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="methodology-river-routing-">Methodology: River routing </h1>
 <p><br/>
 <br/></p>
-<div style="font-size:200%;text-align:center">
+<div style="font-size:200%;">
 $$
-d_t S = R + \color{red}U + \color{red}{GW} - \color{red}{Q(S)}
+d_t S = R + U + GW - Q(S)
 $$
+
+#TODO: add a schematic image
 </div>
 </div>
 </div>
@@ -1825,29 +1875,24 @@ $$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="methodology-lake-routing">Methodology: Lake routing</h1>
-<table class="noborder" width="1000px">
-<tr>
-<td>
-<img src="images/global_and_local_lakes_diagram.jpg" width="600px"/> 
-</td>
+<div style="width:40%;float:left;display:inline-block;">
+<img src="images/global_and_local_lakes_diagram.jpg"/> 
+</div>
 
-<td valign="top" width="60%">
+<div style="display:inline-block;width:60%;">
 <ul>
 <li>
-Rivers can flow into global lakes whereas local lakes get inflow only from runoff and ground water outflow generated in the same grid-cell.
-<br/>
+Rivers can flow into global lakes whereas local lakes 
+get inflow only from runoff and ground water outflow 
+generated in the same grid-cell.
 </li>
 
 <li>
 Each global lake is modelled as a whole by the river-lake routing scheme. 
-<br/>
 </li>
 
 </ul>
-</td>
-
-</tr>
-</table>
+</div>
 </div>
 </div>
 </div></section>
@@ -1860,24 +1905,40 @@ Each global lake is modelled as a whole by the river-lake routing scheme.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="model-configuration-and-domain-of-interest">Model configuration and domain of interest</h1>
-<p><strong>Horizontal grid:</strong> $260\times260$, $dx = 0.1^{\circ}$; <strong>Time step:</strong> 5 min; <nobr><strong>Period:</strong> 1980-2010</nobr></p>
-<table class="noborder">
-<tr>
-<td width="50%">
-    <img src="images/domain.jpg">
-</td>
+<div>
+<div style="width:50%;float:left;display:inline:block;">
+    <img src="images/domain.jpg" style="height:450px;">
+</div>
 
-<td valign="top">
+<div style="width:50%;display:inline-block;">
+<ul>
+<li>
+<strong>Horizontal grid:</strong> $260\times260$, $dx = 0.1^{\circ}$;<br></li>
+
+<li><strong>Time step:</strong> 5 min;</li>
+
+<li><nobr><strong>Period:</strong> 1980-2010</nobr></li>
+
+<li>
 <strong>Surface scheme:</strong> CLASS3.5; 
+</li>
 
+<li>
 <strong>Lake model:</strong> Hostetler; 
+</li>
 
+<li>
 <strong>River model:</strong> WATROUTE-modified; 
+</li>
 
+<li>
 <strong>Atmospheric driving data:</strong> ERA-Interim, $1.5^{\circ}$
-</td>
-</tr>
-</table>
+</li>
+</ul>
+</div>
+
+<div style="clear:both;"></div>
+</div>
 </div>
 </div>
 </div></section>
@@ -1925,8 +1986,10 @@ Each global lake is modelled as a whole by the river-lake routing scheme.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="lake-atmosphere-interactions-nobr-2m-air-temperature-0-nobr-">Lake-atmosphere interactions: <nobr>2m air temperature ${\rm ^{\circ}C}$</nobr></h1>
-<p><img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/TT_CRCM5-HCD-R_CRCM5-R.jpeg"></p>
-<p><strong>No summer cooling visible in seasonal means</strong></p>
+<p><div>
+<img src="images/seasonal_mean_maps/CRCM5-HCD-R_vs_CRCM5-R_for_Winter-Spring-Summer-Fall/TT_CRCM5-HCD-R_CRCM5-R.jpeg" style="width:70%;">
+</div>
+<strong>No summer cooling visible in seasonal means</strong></p>
 </div>
 </div>
 </div></section>
@@ -1979,7 +2042,7 @@ Each global lake is modelled as a whole by the river-lake routing scheme.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="conclusion-lake-atmosphere-interactions">Conclusion: lake-atmosphere interactions</h1>
 <ul>
-<li>Lake-atmosphere interactions warm climate and increase precipitation for the considered experiment</li>
+<li>Lake-atmosphere interactions warm up climate on seasonal scale (cooling is also observed during a short period in summer) and increase precipitation for the considered experimental set up.</li>
 <li>The impact on streamflow is mostly positive, but not very big ($\leq 75\; {\rm m^3/s}$)</li>
 </ul>
 </div>
@@ -2153,8 +2216,8 @@ Each global lake is modelled as a whole by the river-lake routing scheme.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="interflow-mechanism">Interflow: mechanism</h1>
-<div style="text-align:center;">
-<img src="images/interflow.jpeg"/>
+<div>
+<img src="images/runoff_basic.jpg" style="height:700px;margin-left:auto;margin-right:auto;"/>
 </div>
 </div>
 </div>
@@ -2288,16 +2351,30 @@ $$
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[1]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
-<div class="highlight"><pre><span class="c">#copied from: http://slideviewer.herokuapp.com/github/ellisonbg/talk-scipy2013/blob/master/FeaturesAndScope.ipynb#/</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">display</span>
+
 <span class="n">s</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">    &lt;style&gt;</span>
+<span class="s">    .reveal img{</span>
 
-<span class="s">&lt;style&gt;</span>
+<span class="s">    max-height: 700px;</span>
+<span class="s">}</span>
 
+
+<span class="s">.logo img{</span>
+<span class="s">    height: 60px;</span>
+<span class="s">}</span>
+
+<span class="s">#authors{</span>
+<span class="s">    color: gray;</span>
+<span class="s">    font-size: 200%;</span>
+<span class="s">}</span>
+
+<span class="s">//copied from: http://slideviewer.herokuapp.com/github/ellisonbg/talk-scipy2013/blob/master/FeaturesAndScope.ipynb#/</span>
 <span class="s">.rendered_html {</span>
 <span class="s">    font-family: &quot;proxima-nova&quot;, helvetica;</span>
 <span class="s">    font-size: 150%;</span>
@@ -2352,11 +2429,6 @@ In&nbsp;[1]:
 <span class="s">    #26465D</span>
 <span class="s">}</span>
 
-<span class="s">.logo {</span>
-<span class="s">    margin: 20px 0 20px 0;</span>
-<span class="s">    height: 60px;</span>
-<span class="s">}</span>
-
 <span class="s">a.anchor-link {</span>
 <span class="s">    display: none;</span>
 <span class="s">}</span>
@@ -2365,7 +2437,7 @@ In&nbsp;[1]:
 <span class="s">    font-size: 250%;</span>
 <span class="s">}</span>
 
-<span class="s">&lt;/style&gt;</span>
+<span class="s">    &lt;/style&gt;</span>
 <span class="s">&quot;&quot;&quot;</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
 </pre></div>
@@ -2382,9 +2454,23 @@ In&nbsp;[1]:
 
 <div class="output_html rendered_html output_subarea ">
 
+    <style>
+    .reveal img{
 
-<style>
+    max-height: 700px;
+}
 
+
+.logo img{
+    height: 60px;
+}
+
+#authors{
+    color: gray;
+    font-size: 200%;
+}
+
+//copied from: http://slideviewer.herokuapp.com/github/ellisonbg/talk-scipy2013/blob/master/FeaturesAndScope.ipynb#/
 .rendered_html {
     font-family: "proxima-nova", helvetica;
     font-size: 150%;
@@ -2439,11 +2525,6 @@ h3.point {
     #26465D
 }
 
-.logo {
-    margin: 20px 0 20px 0;
-    height: 60px;
-}
-
 a.anchor-link {
     display: none;
 }
@@ -2452,7 +2533,7 @@ h1.title {
     font-size: 250%;
 }
 
-</style>
+    </style>
 
 </div>
 
@@ -2465,7 +2546,7 @@ h1.title {
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">
-In&nbsp;[]:
+In&nbsp;[3]:
 </div>
 <div class="inner_cell">
     <div class="input_area">
@@ -2476,8 +2557,7 @@ In&nbsp;[]:
 </div>
 </div>
 
-</div></section>
-    </section>
+</div>
 </div>
 </div>
 
@@ -2543,7 +2623,7 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
 Reveal.initialize({
 
      //To increase slide size
-     width:'100%',
+     width:'80%',
      height:'100%',
 
 
@@ -2593,6 +2673,9 @@ Reveal.initialize({
 
     // Theme
     //theme: 'default' // available themes are in /css/theme
+
+     // Display the page number of the current slide
+    slideNumber: false,
 
 });
 

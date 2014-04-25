@@ -10,7 +10,7 @@
 Reveal.initialize({
 
      //To increase slide size
-     width:'100%',
+     width:'80%',
      height:'100%',
 
 
@@ -60,6 +60,9 @@ Reveal.initialize({
 
     // Theme
     //theme: 'default' // available themes are in /css/theme
+
+     // Display the page number of the current slide
+    slideNumber: false,
 
 });
 
