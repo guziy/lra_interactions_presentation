@@ -10,7 +10,7 @@
 Reveal.initialize({
 
      //To increase slide size
-     width:'80%',
+     width:'90%',
      height:'100%',
 
 
